@@ -1,24 +1,32 @@
-go-outputdebug
+go-windows-dbg
 ==============
 
-We can view debug-log with debugger or viewer.(Recommend [DebugView for Windows](https://technet.microsoft.com/ja-jp/sysinternals/debugview.aspx) )
+This package contains the functions which output texts to debuggers.
 
-[Example](./example/example.go)
+( Renamed and Simplified from [go-outputdebug](https://github.com/zetamatta/go-outputdebug) )
+
+[Example](./example.go)
 --------------------------------
 
 ```
 package main
 
 import (
-	"fmt"
-	"github.com/zetamatta/go-outputdebug"
+    "github.com/zetamatta/go-windows-dbg"
 )
 
-var dbg = outputdebug.Out
-
 func main() {
-	outputdebug.String("outputdebug.String()")
-	fmt.Fprintf(dbg, "example.go: main() Call dbg.Print\n")
-	fmt.Fprintf(dbg, "foo\nbar\ndddddd\n")
+    dbg.Print("output", 1, "text")
+    dbg.Printf("output<%d>text", 1)
+    dbg.Println("output", 1, "text")
 }
 ```
+
+```
+start dbgview.exe
+go run example.go
+```
+
+Screenshot of [DebugView for Windows](https://technet.microsoft.com/ja-jp/sysinternals/debugview.aspx)
+
+![screen shot](./screenshot.png)
