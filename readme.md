@@ -8,7 +8,7 @@ This package contains the functions which output texts to debuggers.
 [Example](./example.go)
 --------------------------------
 
-```
+```go
 package main
 
 import (
