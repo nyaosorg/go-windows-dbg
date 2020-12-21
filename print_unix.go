@@ -1,4 +1,4 @@
-// +build !windows
+// +build !windows ndebug
 
 package dbg
 

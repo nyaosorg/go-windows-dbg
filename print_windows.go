@@ -1,3 +1,5 @@
+// +build !ndebug,windows
+
 package dbg
 
 import (
