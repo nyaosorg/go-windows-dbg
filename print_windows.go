@@ -7,6 +7,8 @@ import (
 	"unsafe"
 )
 
+const Enabled = true
+
 var kernel32 = syscall.NewLazyDLL("kernel32")
 var outputDebugString = kernel32.NewProc("OutputDebugStringW")
 

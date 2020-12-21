@@ -10,4 +10,6 @@ func main() {
 	dbg.Print("output", 1, "text")
 	dbg.Printf("output<%d>text", 1)
 	dbg.Println("output", 1, "text")
+
+	println("Enabled=", dbg.Enabled)
 }
