@@ -30,3 +30,10 @@ go run example.go
 Screenshot of [DebugView for Windows](https://technet.microsoft.com/ja-jp/sysinternals/debugview.aspx)
 
 ![screen shot](./screenshot.png)
+
+How to Disable output
+---------------------
+
+Set the option `-tags=ndebug` when you do `go build` for your package.
+
+You can see the enabled or disabled by referring `dbg.Enabled`.
