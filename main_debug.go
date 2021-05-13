@@ -1,8 +1,10 @@
+// +build !ndebug
+
 package dbg
 
 import "fmt"
 
-func Print(v ...interface{}) (int, error) {
+func _print(v ...interface{}) (int, error) {
 	s := fmt.Sprint(v...)
 	if err := OutputDebugString(s); err != nil {
 		return 0, err
@@ -10,7 +12,7 @@ func Print(v ...interface{}) (int, error) {
 	return len(s), nil
 }
 
-func Printf(format string, v ...interface{}) (int, error) {
+func _printf(format string, v ...interface{}) (int, error) {
 	s := fmt.Sprintf(format, v...)
 	if err := OutputDebugString(s); err != nil {
 		return 0, err
@@ -18,7 +20,7 @@ func Printf(format string, v ...interface{}) (int, error) {
 	return len(s), nil
 }
 
-func Println(v ...interface{}) (int, error) {
+func _println(v ...interface{}) (int, error) {
 	s := fmt.Sprintln(v...)
 	if err := OutputDebugString(s); err != nil {
 		return 0, err
