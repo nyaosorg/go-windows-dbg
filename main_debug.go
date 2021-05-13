@@ -4,6 +4,9 @@ package dbg
 
 import "fmt"
 
+// Enable is the switch to output to OutputDebugStringW
+const Enabled = true
+
 func _print(v ...interface{}) (int, error) {
 	s := fmt.Sprint(v...)
 	if err := OutputDebugString(s); err != nil {

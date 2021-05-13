@@ -11,3 +11,7 @@ func Printf(format string, v ...interface{}) (int, error) {
 func Println(v ...interface{}) (int, error) {
 	return _println(v...)
 }
+
+func OutputDebugString(s string) error {
+	return outputDebugString(s)
+}
