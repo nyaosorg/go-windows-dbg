@@ -3,7 +3,7 @@
 package main
 
 import (
-	"github.com/zetamatta/go-windows-dbg"
+	"github.com/nyaosorg/go-windows-dbg"
 )
 
 func main() {
