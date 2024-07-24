@@ -36,7 +36,7 @@ Screenshot of [DebugView for Windows](https://technet.microsoft.com/ja-jp/sysint
 [Example-2](./example2.go)
 --------------------------
 
-`dbg.X` is the small function similar with `dbg!` on Rust.
+`dbg.X` is the small function similar with [`dbg!` on Rust](https://doc.rust-lang.org/std/macro.dbg.html).
 
 ```example2.go
 package main
