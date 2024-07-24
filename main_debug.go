@@ -1,3 +1,4 @@
+//go:build !ndebug
 // +build !ndebug
 
 package dbg

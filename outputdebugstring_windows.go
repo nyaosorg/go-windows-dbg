@@ -1,3 +1,4 @@
+//go:build !ndebug && windows
 // +build !ndebug,windows
 
 package dbg
