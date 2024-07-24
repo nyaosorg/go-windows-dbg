@@ -3,7 +3,10 @@
 
 package dbg
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+)
 
 // Enable is the switch to output to OutputDebugStringW
 const Enabled = true
@@ -30,4 +33,10 @@ func _println(v ...interface{}) (int, error) {
 		return 0, err
 	}
 	return len(s), nil
+}
+
+func _X[T any](v T) T {
+	_, f, l, _ := runtime.Caller(1)
+	Printf("[%s:%d] %#v\n", f, l, v)
+	return v
 }

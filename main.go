@@ -15,3 +15,7 @@ func Println(v ...interface{}) (int, error) {
 func OutputDebugString(s string) error {
 	return outputDebugString(s)
 }
+
+func X[T any](v T) T {
+	return _X(v)
+}
