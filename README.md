@@ -1,9 +1,14 @@
 go-windows-dbg
 ==============
 
-This package contains the functions which output texts to debuggers.
+This package provides the functions to output text to debuggers on Windows
 
-( Renamed and Simplified from [go-outputdebug](https://github.com/zetamatta/go-outputdebug) )
+( Renamed and simplified from [go-outputdebug](https://github.com/zetamatta/go-outputdebug) )
+
++ On Windows, the functions call the OutputDebugStringW API
++ With the compile option `-tags=ndebug`, debug strings are discarded
++ On non-Windows operating systems, the functions do nothing
++ You can check if debugging is enabled or disabled by referring to `dbg.Enabled`
 
 [Example-1](./example.go)
 --------------------------------
@@ -57,10 +62,3 @@ func main() {
 ```
 
 ![screen shot](./screenshot2.png)
-
-How to Disable output
----------------------
-
-Set the option `-tags=ndebug` when you do `go build` for your package.
-
-You can see the enabled or disabled by referring `dbg.Enabled`.
